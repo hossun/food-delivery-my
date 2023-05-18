@@ -115,18 +115,11 @@ public class StoreOrder  {
 
         */
 
-        /** Example 2:  finding and process
-        
-        repository().findById(orderCanceled.get???()).ifPresent(storeOrder->{
-            
-            storeOrder // do something
+        /** Example 2:  finding and process */
+        repository().findById(orderCanceled.getId()).ifPresent(storeOrder->{
+            storeOrder.setStatus("주문 취소");  // do something
             repository().save(storeOrder);
-
-
          });
-        */
-
-        
     }
 
 
